@@ -13,11 +13,10 @@ import HomePage from "./components/home/homePage";
 const App = () => {
   const { weather, forecast, history, fetchWeather, error, loading } = useWeather();
   const [showError, setShowError] = useState(false);
-  const API_KEY = process.env.VITE_OPENWEATHERMAP_API_KEY;
+  
 
   useEffect(() => {
     if (error) {
-      console.log(API_KEY);
       setShowError(true);
       const timer = setTimeout(() => setShowError(false), 800);
       return () => clearTimeout(timer);
