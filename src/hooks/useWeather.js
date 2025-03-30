@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_KEY = process.env.VITE_OPENWEATHERMAP_API_KEY;
+const API_KEY = import.meta.env.VITE_OPENWEATHERMAP_API_KEY;
 
 
 
